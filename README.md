@@ -22,3 +22,27 @@ class ScavTrap : public ClapTrap {
 ```
 
 `public ClapTrap` on first line indicates that ScavTrap is inheriting from the class ClapTrap using public inheritance. Public inheritance means that the public and protected members of the base class (ClapTrap) will remain public and protected, respectively, in the derived class (ScavTrap).
+
+```c++
+class Base {
+public:
+    int publicVar;
+protected:
+    int protectedVar;
+private:
+    int privateVar;
+};
+
+class Derived : public Base {
+    // publicVar remains public
+    // protectedVar remains protected
+    // privateVar is not accessible
+};
+```
+
+```c++
+class Derived : private Base {
+    // Inherits privately
+};
+```
+In private inheritance, **all public and protected members of the base class become private** in the derived class.
