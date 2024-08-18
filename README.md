@@ -1,5 +1,5 @@
 # 42_CPP_03
-Keyword: inheritance
+Keypoint: with inheritance you can define another class with attributed from the original class, and you can add members (attributes and methods) you need.
 
 ## New Thing To Learn
 
