@@ -3,6 +3,7 @@ Keyword: inheritance
 
 ## New Thing To Learn
 
+### public inheritance, private inheritance
 ```c++
 class ScavTrap : public ClapTrap {
     public:
@@ -46,3 +47,27 @@ class Derived : private Base {
 };
 ```
 In private inheritance, **all public and protected members of the base class become private** in the derived class.
+
+### Access specifiers review
+* **public** can be accessed from anywhere outside the class.
+* **private** can only be accessed from within the class itself. They are not accessible outside the class, not even by derived classes.
+
+```c++
+class MyClass {
+private:
+    int privateVariable;
+
+    void privateMethod() {
+        // Only accessible within this class
+    }
+};
+```
+
+```c++
+MyClass obj;
+obj.privateVariable = 10;  // Invalid, will cause a compilation error
+obj.privateMethod();       // Invalid, will cause a compilation error
+```
+private members can be accessed with public function
+
+* **protected** can be accessed from within the class itself and by derived classes(ScavTrap in this project), but not from outside the class.
