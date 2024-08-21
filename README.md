@@ -22,7 +22,7 @@ class ScavTrap : public ClapTrap {
 };
 ```
 
-`public ClapTrap` on first line indicates that ScavTrap is inheriting from the class ClapTrap using public inheritance. Public inheritance means that the public and protected members of the base class (ClapTrap) will remain public and protected, respectively, in the derived class (ScavTrap).
+`public ClapTrap` on first line indicates that ScavTrap is inheriting from the class ClapTrap using public inheritance. Public inheritance means that **the public and protected members of the base class (ClapTrap) will remain public and protected**, respectively, in the derived class (ScavTrap).
 
 ```c++
 class Base {
