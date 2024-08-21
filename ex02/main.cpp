@@ -6,7 +6,7 @@
 /*   By: yowoo <yowoo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 14:04:43 by yowoo             #+#    #+#             */
-/*   Updated: 2024/08/18 17:11:49 by yowoo            ###   ########.fr       */
+/*   Updated: 2024/08/21 10:27:42 by yowoo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,20 @@
 
 int main(void)
 {
+	//construct claptrap
     ClapTrap    cl1("CL1");
     ClapTrap    cl2("CL2");
+	
+	//construct scavtrap
 	ScavTrap	sc1("SC1");
 	ScavTrap	sc2("SC2");
+
+	//construct fragtrap
+	FragTrap	fr1("FR1");
+	FragTrap	fr2("FR2");
+	
 	ClapTrap	cpClap;
 	ScavTrap	cpScav;
-	FragTrap	fr1("FR1");
 	FragTrap	cpFrag;
 	
 	std::cout << "-------copy test below-----------" << std::endl;
@@ -55,8 +62,8 @@ int main(void)
 
 	std::cout << "							 " << std::endl;
 	
-	fr1.attack("emotional damage");
-	fr1.takeDamage(3);
+	fr1.attack("fr2");
+	fr2.takeDamage(3);
 	fr1.beRepaired(3);
 	fr1.highFivesGuys();
 
